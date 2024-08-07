@@ -10,6 +10,7 @@
     "test": "npm-run-all test:*",
     "test:html": "html-validate *.html",
     "test:js": "eslint js/",
+    "test:scss": "stylelint sass/",
     "build": "npm-run-all build:* test:*",
     "build:sass": "sass --style=compressed --no-source-map sass:css",
     "build:autoprefixer": "postcss css/*.css --use autoprefixer -d css",
@@ -32,7 +33,10 @@
     "onchange": "^7.1.0",
     "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "stylelint": "^16.8.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-scss": "^6.5.0"
   },
   "dependencies": {
     "html-validate": "^8.21.0"
