@@ -34,7 +34,34 @@ const titleClickHandler = function(event){
     /* [DONE]add class 'active' to the correct article */
     article.classList.add('active');
 }
-  
+ 
+const generateTitleLinks = function(){
+    
+    //[DONE]Removing all elements from the list
+    const articleList = document.querySelector('ul.titles');    
+    articleList.innerHTML = '';
+
+    //[DONE]generating a list of articles
+    const articlesId = document.querySelectorAll('article');
+    for(const articleId of articlesId){
+        
+        //Id of article
+        const savedArticleId = articleId.id;
+        
+        //Title of article
+        const articleTitle = articleId.querySelector('.post-title').innerHTML;
+        
+        //Creating new elements of the list
+        const newLiElement = document.createElement('li');
+        const newLinkElement = document.createElement('a');
+        newLinkElement.href = '#' + savedArticleId;
+        newLinkElement.innerHTML = articleTitle;
+        articleList.appendChild(newLiElement).appendChild(newLinkElement);
+    };
+}   
+
+generateTitleLinks();
+
 const links = document.querySelectorAll('.titles a');
   
 for(let link of links){
