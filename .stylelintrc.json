@@ -1,5 +1,5 @@
 {
-  "extends": "stylelint-config-recommended-scss",
+  "extends": ["stylelint-config-recommended-scss"],
   "rules": {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
