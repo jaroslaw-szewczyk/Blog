@@ -7,7 +7,7 @@ const opts = {
   optTagsListSelector: '.tags.list',
   optCloudClassCount: 5,
   optCloudClassPrefix: 'tag-size-',
-}
+};
 
 
 const titleClickHandler = function(event){
@@ -79,17 +79,17 @@ function generateTitleLinks(customSelector = ''){
 
 function calculateTagsParams(allTags) {
 
- const parms = {
-  min: 999999,
-  max: 0,
- }
+  const parms = {
+    min: 999999,
+    max: 0,
+  };
 
- for(const tag in allTags){
-  parms.max = Math.max(allTags[tag], parms.max);
-  parms.min = Math.min(allTags[tag], parms.min);
- }
+  for(const tag in allTags){
+    parms.max = Math.max(allTags[tag], parms.max);
+    parms.min = Math.min(allTags[tag], parms.min);
+  }
 
- return parms;
+  return parms;
 };
 
 function calculateTagClass(count, parms){
@@ -140,14 +140,14 @@ function generateTags(){
 
       /* [OLD] check if this link is NOT already in allTags */
       // if(allTags.indexOf(linkHtml) == -1){
-        /* [OLD]add generated code to allTags array */
-        //allTags.push(linkHtml);
+      /* [OLD]add generated code to allTags array */
+      //allTags.push(linkHtml);
       //}
 
       /* [NEW] check if this link is NOT already in allTags */
       if(!allTags[tag]) {
       /* [NEW] add tag to allTags object */
-      allTags[tag] = 1;
+        allTags[tag] = 1;
       } else {
         allTags[tag]++;
       }
