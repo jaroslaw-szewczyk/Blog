@@ -99,7 +99,7 @@ function generateTags(){
     for(const tag of tagsArray){
 
       /* [DONE]generate HTML of the link */
-      const linkHtml = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      const linkHtml = '<li><a href="#tag-' + tag + '">' + tag + ',</a></li>';
 
       /* <DONE]add generated code to html variable */
       html =  html + linkHtml;
