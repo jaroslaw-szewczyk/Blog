@@ -222,8 +222,8 @@ function tagClickHandler(event){
 
 function generateAuthors() {
 
-   /* [DONE] create a new variable allAuthors with an empty object */
-   let allAuthors = {};
+  /* [DONE] create a new variable allAuthors with an empty object */
+  let allAuthors = {};
 
   /*[DONE]finding all articles*/
   const allArticles = document.querySelectorAll(opts.optArticleSelector);
@@ -250,7 +250,7 @@ function generateAuthors() {
     }
   }
 
-   /*[DONE]find list of authors in right column */
+  /*[DONE]find list of authors in right column */
   const authorList = document.querySelector(opts.optAuthorListSelector);
 
   let allAuthorsHTML = '';
@@ -258,7 +258,7 @@ function generateAuthors() {
   /*[DONE]Loop for each author in allAuthors*/
   for(const author in allAuthors){
     /*[DONE]generate code of a link and add it to allAuthorsHTM */
-    allAuthorsHTML += '<li><a href="#' + author + '">' + author + ' (' + allAuthors[author] + ')' +'</a></li>'
+    allAuthorsHTML += '<li><a href="#' + author + '">' + author + ' (' + allAuthors[author] + ')' +'</a></li>';
   }
 
   /*[DONE] add HTML from allAuthorsHTML to authorList */
