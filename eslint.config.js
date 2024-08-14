@@ -12,7 +12,8 @@ export default [
       globals: {
         document: 'readonly',
         console: 'readonly',
-        window: 'readonly'
+        window: 'readonly',
+        Handlebars: false
       }
     },
     rules: {
